@@ -1,3 +1,4 @@
 {
-    "mongoURI": "mongodb+srv://raghu-dev1:Qwerty123@wt2project-sojka.mongodb.net/test?retryWrites=true&w=majority"
+    "mongoURI": "mongodb+srv://raghu-dev1:Qwerty123@wt2project-sojka.mongodb.net/test?retryWrites=true&w=majority",
+    "jwtSecret": "mysecrettoken"
 }
