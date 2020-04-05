@@ -4,7 +4,7 @@ const auth = require('../../middleware/auth');
 const {
     check,
     validationResult
-} = require('express-validator/check');
+} = require('express-validator');
 const User = require('../../models/User');
 const Profile = require('../../models/Profile');
 
@@ -174,7 +174,7 @@ router.delete('/', auth, async (req, res) => {
     }
 });
 // @route  PUT api/profile/experience
-// @desc   Delete profile, user and post
+// @desc   add experience to profile
 // @access Private
 
 router.put('/experience', [auth, [
@@ -218,4 +218,23 @@ router.put('/experience', [auth, [
         res.status(500).send('Server Error');
     }
 });
+// @route  PUT api/profile/experience
+// @desc   add experience to profile
+// @access Private
+router.delete('/experience/:exp_id', auth, async (req, res) => {
+    try {
+        const profile = await Profile.findOne({
+            user: req.user.id
+        });
+        const removeIndex = profile.experience
+            .map(item => item.id).indexOf(req.params.exp_id);
+        profile.experience.splice(removeIndex, 1);
+        await profile.save();
+        res.json(profile);
+    } catch (err) {
+        console.log(err.message);
+        res.status(500).send('Server Error');
+
+    }
+})
 module.exports = router;
