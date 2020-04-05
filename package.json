@@ -1,0 +1,19 @@
+{
+  "name": "wt-project",
+  "version": "1.0.0",
+  "description": "WT-2 Project Social Network for Devs.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bagyasree-s/WT-Project.git"
+  },
+  "author": "Raghu Ganapathy, Bagyasree Sudershan, Jayadev M Pillai",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bagyasree-s/WT-Project/issues"
+  },
+  "homepage": "https://github.com/bagyasree-s/WT-Project#readme"
+}
