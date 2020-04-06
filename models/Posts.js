@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const PostSchema = new Schema({
     user: {
         type: Schema.Types.ObjectId,
-        ref: 'user'
+        ref: 'users'
     },
     text: {
         type: String,
@@ -16,14 +16,16 @@ const PostSchema = new Schema({
     avatar: {
         type: String
     },
-    like: [{
-        type: Schema.Types.ObjectId,
-        ref: 'user'
+    likes: [{
+        user: {
+            type: Schema.Types.ObjectId,
+            ref: 'user'
+        }
     }],
     comments: [{
         user: {
             type: Schema.Types.ObjectId,
-            ref: 'user'
+            ref: 'users'
         },
         text: {
             type: String,
