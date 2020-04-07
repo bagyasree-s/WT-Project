@@ -1,6 +1,6 @@
 import axios from 'axios';
 import {
-    REGISTER_SUCCESS, REGISTER_FAIL, USER_LOADED, AUTH_ERROR, LOGIN_FAIL, LOGIN_SUCCESS
+    REGISTER_SUCCESS, REGISTER_FAIL, USER_LOADED, AUTH_ERROR, LOGIN_SUCCESS, LOGIN_FAIL
 } from './types';
 import { setAlert } from './alert';
 
@@ -50,14 +50,16 @@ export const register = ({ name, email, password }) => async dispatch => {
     }
 };
 // Login User
-export const login = ({ email, password }) => async dispatch => {
+export const login = (email, password) => async dispatch => {
+    console.log(email)
+    console.log(password)
     const config = {
         headers: {
             'Content-Type': 'application/json'
         }
     }
     const body = JSON.stringify({ email, password });
-
+    console.log(body)
     try {
         const res = await axios.post('/api/auth', body, config);
         dispatch({
