@@ -196,7 +196,7 @@ router.put(
             from,
             to,
             current,
-            desription,
+            description,
         } = req.body;
         const newExp = {
             title,
@@ -205,7 +205,7 @@ router.put(
             from,
             to,
             current,
-            desription,
+            description,
         };
         try {
             const profile = await Profile.findOne({
@@ -268,7 +268,7 @@ router.put(
             from,
             to,
             current,
-            desription,
+            description,
         } = req.body;
         const newEdu = {
             school,
@@ -277,7 +277,7 @@ router.put(
             from,
             to,
             current,
-            desription,
+            description,
         };
         try {
             const profile = await Profile.findOne({
@@ -318,10 +318,10 @@ router.get("/github/:username", (req, res) => {
     try {
         const options = {
             uri: `https://api.github.com/users/${
-        req.params.username
-      }/repos?per_page=5&sort=created:asc&client_id=${config.get(
-        "githubClientId"
-      )}&client_secret=${config.get("githubClientSecret")}`,
+                req.params.username
+                }/repos?per_page=5&sort=created:asc&client_id=${config.get(
+                    "githubClientId"
+                )}&client_secret=${config.get("githubClientSecret")}`,
             method: "GET",
             headers: {
                 "user-agent": "node.js ",
