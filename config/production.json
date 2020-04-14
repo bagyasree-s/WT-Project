@@ -1,0 +1,6 @@
+{
+    "mongoURI": "mongodb+srv://raghu-dev1:Qwerty123@wt2project-sojka.mongodb.net/test?retryWrites=true&w=majority",
+    "jwtSecret": "mysecrettoken",
+    "githubClientId": "192c762e482d685c8611",
+    "githubClientSecret": "1c522c7d70178fae7198e8a3712cdfe1c35d5d7d"
+}
