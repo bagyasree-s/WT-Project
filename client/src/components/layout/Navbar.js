@@ -15,6 +15,9 @@ export const Navbar = ({ auth: { loading, isAuthenticated }, logout }) => {
                 </Link>
             </li>
             <li>
+                <Link to='/posts'>Posts</Link>
+            </li>
+            <li>
                 <Link to="/dashboard">
                     <i className='fas fa-user'></i>{' '}
                     <span className='hide-sm'>Dashboard</span>
@@ -38,6 +41,7 @@ export const Navbar = ({ auth: { loading, isAuthenticated }, logout }) => {
                     Developers
                 </Link>
             </li>
+
             <li><Link to="/register">Register</Link></li>
             <li><Link to="/login">Login</Link></li>
         </ul>
