@@ -23,23 +23,22 @@ const CommentForm = ({ postId, addComment }) => {
                     name='text'
                     cols='30'
                     rows='5'
-                    placeholder='Create a comment'
+                    placeholder='Comment the post'
                     value={text}
                     onChange={e => setText(e.target.value)}
                     required
                 />
-                <input
-                    type='submit'
-                    className='btn btn-dark my-1'
-                    value='Submit'
-                />
+                <input type='submit' className='btn btn-dark my-1' value='Submit' />
             </form>
         </div>
     );
 };
 
 CommentForm.propTypes = {
-    addComment: PropTypes.func.isRequired,
+    addComment: PropTypes.func.isRequired
 };
 
-export default connect(null, { addComment })(CommentForm);
+export default connect(
+    null,
+    { addComment }
+)(CommentForm);
