@@ -52,7 +52,7 @@ export const Navbar = ({ auth: { loading, isAuthenticated }, logout }) => {
     return (
         <nav className="navbar bg-dark">
             <h1>
-                <Link to="/"><i className="fas fa-code"></i> DevConnector</Link>
+                <Link to="/"><i class="fas fa-cat"></i> PESU Connect</Link>
             </h1>
             {!loading && (<Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>)}
         </nav>
